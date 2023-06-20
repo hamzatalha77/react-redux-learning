@@ -1,7 +1,11 @@
 import React from 'react'
 
 const Login = () => {
-  return <div>Login</div>
+  return (
+    <div>
+      <button>Login</button>
+    </div>
+  )
 }
 
 export default Login
