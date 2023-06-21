@@ -15,7 +15,7 @@ const Login = () => {
       >
         Login
       </button>
-      <button onClick={() => dispatch(logout())}></button>
+      <button onClick={() => dispatch(logout())}>Logout</button>
     </div>
   )
 }
