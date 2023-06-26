@@ -9,13 +9,19 @@ interface RootState {
       email: string
     }
   }
+  theme: {
+    value: {
+      color: string
+    }
+  }
 }
 
 const Profile = () => {
   const user = useSelector((state: RootState) => state.user.value)
+  const themeColor = useSelector((state: RootState) => state.theme.value)
 
   return (
-    <div>
+    <div style={{ color: themeColor }}>
       <h1>Profile Page</h1>
       <p>Name: {user.name}</p>
       <p>Age: {user.age}</p>
