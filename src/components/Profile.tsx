@@ -18,7 +18,7 @@ interface RootState {
 
 const Profile = () => {
   const user = useSelector((state: RootState) => state.user.value)
-  const themeColor = useSelector((state: RootState) => state.theme.value)
+  const themeColor = useSelector((state: RootState) => state.theme.value.color)
 
   return (
     <div style={{ color: themeColor }}>
