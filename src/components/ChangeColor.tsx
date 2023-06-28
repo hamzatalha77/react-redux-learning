@@ -6,6 +6,10 @@ function ChangeColor() {
   const [color, setColor] = useState('')
   const dispatch = useDispatch()
 
+  const handleColorChange = () => {
+    dispatch(changeColor({ color: color })) // Pass the color as an object with a "color" property
+  }
+
   return (
     <div>
       <input
@@ -14,13 +18,7 @@ function ChangeColor() {
           setColor(event.target.value)
         }}
       />
-      <button
-        onClick={() => {
-          dispatch(changeColor(color))
-        }}
-      >
-        CHANGE COLOR
-      </button>
+      <button onClick={handleColorChange}>CHANGE COLOR</button>
     </div>
   )
 }
